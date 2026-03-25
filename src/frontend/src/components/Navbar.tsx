@@ -10,10 +10,10 @@ export default function Navbar() {
         borderBottom: "1px solid rgba(255,255,255,0.06)",
       }}
     >
-      <div className="container mx-auto max-w-6xl flex items-center justify-between">
+      <div className="w-full max-w-6xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div
-            className="w-8 h-8 rounded-lg flex items-center justify-center"
+            className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
             style={{
               background: "linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%)",
             }}
@@ -27,7 +27,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <div
-            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium"
             style={{
               background: "rgba(34, 197, 94, 0.1)",
               border: "1px solid rgba(34, 197, 94, 0.25)",
@@ -35,7 +35,8 @@ export default function Navbar() {
             }}
           >
             <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-            Campaign Live
+            <span className="hidden sm:inline">Campaign Live</span>
+            <span className="sm:hidden">Live</span>
           </div>
           <div
             className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium"

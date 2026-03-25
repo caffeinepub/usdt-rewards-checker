@@ -165,15 +165,20 @@ export default function HeroSection() {
           style={{ opacity: 0, animationDelay: "400ms" }}
         >
           <div className="glass-strong rounded-2xl p-5 max-w-2xl mx-auto">
-            <div className="grid grid-cols-3 gap-4 mb-4">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4">
+              {/* Total Pool */}
               <div className="text-center">
-                <div className="text-xl sm:text-2xl font-extrabold gradient-text">
-                  {TOTAL_POOL.toLocaleString()} USDT
+                <div className="text-base sm:text-2xl font-extrabold gradient-text leading-tight">
+                  {TOTAL_POOL.toLocaleString()}
+                  <span className="block text-xs sm:text-sm font-bold mt-0.5">
+                    USDT
+                  </span>
                 </div>
-                <div className="text-xs text-white/40 mt-1">
+                <div className="text-[10px] sm:text-xs text-white/40 mt-1">
                   Total Airdrop Pool
                 </div>
               </div>
+              {/* Claimed */}
               <div
                 className="text-center"
                 style={{
@@ -182,28 +187,37 @@ export default function HeroSection() {
                 }}
               >
                 <div
-                  className="text-xl sm:text-2xl font-extrabold"
+                  className="text-base sm:text-2xl font-extrabold leading-tight"
                   style={{ color: "#4ade80" }}
                 >
                   {CLAIMED_AMOUNT.toLocaleString()}
+                  <span className="block text-xs sm:text-sm font-bold mt-0.5">
+                    USDT
+                  </span>
                 </div>
-                <div className="text-xs text-white/40 mt-1">USDT Claimed</div>
+                <div className="text-[10px] sm:text-xs text-white/40 mt-1">
+                  USDT Claimed
+                </div>
               </div>
+              {/* Slots */}
               <div className="text-center">
                 <div
-                  className="text-xl sm:text-2xl font-extrabold"
+                  className="text-base sm:text-2xl font-extrabold leading-tight"
                   style={{ color: "#fb923c" }}
                 >
                   {SLOTS_REMAINING.toLocaleString()}
+                  <span className="block text-xs sm:text-sm font-bold mt-0.5 opacity-0">
+                    ·
+                  </span>
                 </div>
-                <div className="text-xs text-white/40 mt-1">
+                <div className="text-[10px] sm:text-xs text-white/40 mt-1">
                   Slots Remaining
                 </div>
               </div>
             </div>
             {/* Progress bar */}
             <div>
-              <div className="flex justify-between text-xs text-white/40 mb-1.5">
+              <div className="flex justify-between text-[10px] sm:text-xs text-white/40 mb-1.5">
                 <span>{claimedPct}% of airdrop claimed</span>
                 <span className="text-orange-400 font-medium">
                   Only {SLOTS_REMAINING} slots left!
