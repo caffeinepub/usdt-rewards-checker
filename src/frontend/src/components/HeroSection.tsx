@@ -227,14 +227,6 @@ export default function HeroSection() {
                 >
                   {SLOTS_REMAINING.toLocaleString()}
                 </div>
-                {/* Spacer to match USDT label height in other columns */}
-                <div
-                  className="font-bold mt-0.5 invisible select-none"
-                  style={{ fontSize: "clamp(9px, 2.5vw, 0.875rem)" }}
-                  aria-hidden="true"
-                >
-                  USDT
-                </div>
                 <div className="text-[10px] sm:text-xs text-white/40 mt-1">
                   Slots Remaining
                 </div>
