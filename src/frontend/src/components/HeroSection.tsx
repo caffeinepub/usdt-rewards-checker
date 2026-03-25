@@ -167,54 +167,80 @@ export default function HeroSection() {
           <div className="glass-strong rounded-2xl p-5 max-w-2xl mx-auto">
             <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4">
               {/* Total Pool */}
-              <div className="text-center">
-                <div className="text-base sm:text-2xl font-extrabold gradient-text leading-tight">
+              <div className="text-center flex flex-col items-center justify-start">
+                <div
+                  className="font-extrabold gradient-text leading-tight tabular-nums"
+                  style={{ fontSize: "clamp(11px, 3.5vw, 1.5rem)" }}
+                >
                   {TOTAL_POOL.toLocaleString()}
-                  <span className="block text-xs sm:text-sm font-bold mt-0.5">
-                    USDT
-                  </span>
+                </div>
+                <div
+                  className="font-bold mt-0.5"
+                  style={{ fontSize: "clamp(9px, 2.5vw, 0.875rem)" }}
+                >
+                  USDT
                 </div>
                 <div className="text-[10px] sm:text-xs text-white/40 mt-1">
                   Total Airdrop Pool
                 </div>
               </div>
+
               {/* Claimed */}
               <div
-                className="text-center"
+                className="text-center flex flex-col items-center justify-start"
                 style={{
                   borderLeft: "1px solid rgba(255,255,255,0.07)",
                   borderRight: "1px solid rgba(255,255,255,0.07)",
                 }}
               >
                 <div
-                  className="text-base sm:text-2xl font-extrabold leading-tight"
-                  style={{ color: "#4ade80" }}
+                  className="font-extrabold leading-tight tabular-nums"
+                  style={{
+                    color: "#4ade80",
+                    fontSize: "clamp(11px, 3.5vw, 1.5rem)",
+                  }}
                 >
                   {CLAIMED_AMOUNT.toLocaleString()}
-                  <span className="block text-xs sm:text-sm font-bold mt-0.5">
-                    USDT
-                  </span>
+                </div>
+                <div
+                  className="font-bold mt-0.5"
+                  style={{
+                    color: "#4ade80",
+                    fontSize: "clamp(9px, 2.5vw, 0.875rem)",
+                  }}
+                >
+                  USDT
                 </div>
                 <div className="text-[10px] sm:text-xs text-white/40 mt-1">
                   USDT Claimed
                 </div>
               </div>
+
               {/* Slots */}
-              <div className="text-center">
+              <div className="text-center flex flex-col items-center justify-start">
                 <div
-                  className="text-base sm:text-2xl font-extrabold leading-tight"
-                  style={{ color: "#fb923c" }}
+                  className="font-extrabold leading-tight tabular-nums"
+                  style={{
+                    color: "#fb923c",
+                    fontSize: "clamp(20px, 5.5vw, 2.25rem)",
+                  }}
                 >
                   {SLOTS_REMAINING.toLocaleString()}
-                  <span className="block text-xs sm:text-sm font-bold mt-0.5 opacity-0">
-                    ·
-                  </span>
+                </div>
+                {/* Spacer to match USDT label height in other columns */}
+                <div
+                  className="font-bold mt-0.5 invisible select-none"
+                  style={{ fontSize: "clamp(9px, 2.5vw, 0.875rem)" }}
+                  aria-hidden="true"
+                >
+                  USDT
                 </div>
                 <div className="text-[10px] sm:text-xs text-white/40 mt-1">
                   Slots Remaining
                 </div>
               </div>
             </div>
+
             {/* Progress bar */}
             <div>
               <div className="flex justify-between text-[10px] sm:text-xs text-white/40 mb-1.5">
